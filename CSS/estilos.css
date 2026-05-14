@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --color-primary: #274b12;
+  --color-secondary: #ffffff;
+  --navbar-height: 72px;
+}
+
+html {
+  font-family: 'Lato', Arial, sans-serif;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  background-color: #020e02;
+  color: #f5f5f5;
+  padding-top: var(--navbar-height);
+  position: relative;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #041d10 0%, #112715 60%, #041702 100%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  min-height: var(--navbar-height);
+  margin-bottom: 0 !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width 0.2s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+#productos p {
+  color: #000;
+}
+
+.section-title {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+}
+
+.hero-img {
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.product-card {
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+#video h2,
+#video p {
+  color: #000;
+}
+
+.contacto-form {
+  max-width: 700px;
+}
+
+
+.social-link img {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover img {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+#Descubrí-tu-Esencia,
+#Descubrí-tu-Esencia h2,
+#Descubrí-tu-Esencia p {
+  color: #ffffff;
+}
+
+.nota-destacada {
+  background-color: #020e02;
+  color: #fff;
+}
+
+.nota-title {
+  line-height: 1.1;
+}
+
+.nota-subtitle {
+  letter-spacing: 0.08em;
+  color: #d1d5db;
+}
+
+#Descubrí-tu-Esencia strong {
+  color: #d6ffbe;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  #Descubrí-tu-Esencia .row.align-items-stretch > .col-lg-6 {
+    min-height: 520px;
+  }
+
+  
+  #Descubrí-tu-Esencia .row.align-items-stretch > .col-lg-6:first-child {
+    padding-left: 3rem;
+    padding-right: 2rem; 
+  }
+}
+
+@media (min-width: 1200px) {
+  #Descubrí-tu-Esencia .row.align-items-stretch > .col-lg-6:first-child {
+    padding-left: 8rem; /* Margen grande azul */
+    padding-right: 4rem;
+  }
+}
+
+
+#Descubrí-tu-Esencia .row.align-items-stretch > .col-lg-6:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#carouselNota {
+  width: 100%;
+  height: 100%;
+  background-color: #020e02; 
+}
+
+#carouselNota .carousel-inner,
+#carouselNota .carousel-item {
+  height: 100%;
+}
+
+#carouselNota .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important; 
+  display: block;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 767.98px) {
+  #Descubrí-tu-Esencia .row.align-items-stretch > .col-lg-6 {
+    min-height: auto;
+  }
+
+  #carouselNota, 
+  #carouselNota .carousel-inner,
+  #carouselNota .carousel-item,
+  #carouselNota .carousel-item img {
+    height: auto; 
+  }
+
+  .nota-destacada .col-lg-6:first-child {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #Descubrí-tu-Esencia .row.align-items-stretch > .col-lg-6 {
+    min-height: auto;
+  }
+
+  
+  .nota-destacada .col-lg-6:first-child {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;  
+    padding-right: 3rem;
+  }
+
+  #carouselNota, 
+  #carouselNota .carousel-inner,
+  #carouselNota .carousel-item,
+  #carouselNota .carousel-item img {
+    height: auto;
+  }
+}
+
+
+#contacto,
+#contacto h2,
+#contacto p,
+#contacto label {
+  color: #ffffff;
+}
+
+.footer-almerie {
+  background: linear-gradient(90deg, #041d10 0%, #112715 60%, #041702 100%);
+  color: #f5f5f5;
+  border-top: 1px solid rgba(203, 255, 206, 0.08);
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+
+.btn-dark {
+  background-color: #073307;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: #ffffff;
+  color: #020e02;
+}
+
+.btn-outline-light {
+  color: #ffffff;
+  border-color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  background-color: #ffffff;
+  color: #020e02;
+}
+
+#canvas-parent {
+    width: 100% !important;
+    height: 500px !important;
+    background-color: #020e02 !important;
+    display: block !important;
+    overflow: hidden;
+    position: relative;
+}
+
+canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #041d10;
+    padding: 1rem 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1.5rem;
+  }
+}

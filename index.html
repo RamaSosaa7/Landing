@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfumería Almerie - Sosa, García Oliver, Aponte - DMM2CP Mañana 2025</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120">
+  
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand d-flex align-items-center" href="#banner">
+        <img src="Imagenes/logo.png" alt="Logo de perfumería Almerie" class="me-2" style="height:40px;">
+        <span class="fw-semibold">Almerie</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#banner" aria-current="page">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Descubrí-tu-Esencia">Descubrí tu Esencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#video">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header id="inicio">
+      <section id="banner" class="ratio ratio-16x9 vh-100 text-center">
+        
+        <div class="z-3 bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center">
+          <h1 class="display-4 fw-semibold text-uppercase mb-3">Almerie</h1>
+          <p class="lead mb-4">Más que una fragancia</p>
+          <a href="#productos" class="btn btn-outline-light btn-lg">
+            Ver fragancias
+          </a>
+        </div>
+        
+        <video src="Imagenes/video banner_opcion2.mp4"
+               autoplay
+               muted
+               loop
+               class="object-fit-cover">
+        </video>
+      </section>
+    </header>
+
+    <section id="productos" class="py-5 bg-light">
+      <div class="container-fluid px-4 px-lg-5">
+        <h2 class="section-title text-center mb-3 text-uppercase">Nuestras Fragancias</h2>
+        <p class="text-center mb-5">
+          Cuatro fragancias pensadas para distintos estilos y momentos del día.
+        </p>
+
+        <div class="row g-4">
+          <article class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 text-center product-card shadow-sm">
+              <img src="Imagenes/perfu.png" class="card-img-top img-fluid" alt="Fragancia Adventure">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title text-uppercase">Sugar</h3>
+                <p class="card-text small mb-3">
+                  Almizcle, piña y sándalo en una mezcla intensa y moderna.
+                </p>
+                <p class="fw-semibold mb-3">$35.000</p>
+                <a  class="btn btn-outline-dark btn-sm mt-auto">Ver más</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 text-center product-card shadow-sm">
+              <img src="Imagenes/perfu1.png" class="card-img-top img-fluid" alt="Fragancia Tobac">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title text-uppercase">Tobac</h3>
+                <p class="card-text small mb-3">
+                  Tabaco, anís estrellado y canela, ideal para la noche.
+                </p>
+                <p class="fw-semibold mb-3">$24.000</p>
+                <a  class="btn btn-outline-dark btn-sm mt-auto">Ver más</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 text-center product-card shadow-sm">
+              <img src="Imagenes/perfu2.png" class="card-img-top img-fluid" alt="Fragancia Savage">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title text-uppercase">Savage</h3>
+                <p class="card-text small mb-3">
+                  Lavanda, cedro y limón para una frescura suave y elegante.
+                </p>
+                <p class="fw-semibold mb-3">$29.000</p>
+                <a  class="btn btn-outline-dark btn-sm mt-auto">Ver más</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 text-center product-card shadow-sm">
+              <img src="Imagenes/perfu3.png" class="card-img-top img-fluid" alt="Fragancia Eras">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title text-uppercase">Adventure</h3>
+                <p class="card-text small mb-3">
+                  Rosa, vainilla y ámbar para un sello clásico y sofisticado.
+                </p>
+                <p class="fw-semibold mb-3">$31.000</p>
+                <a  class="btn btn-outline-dark btn-sm mt-auto">Ver más</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="Descubrí-tu-Esencia" class="Descubrí-tu-Esencia-destacada py-5">
+      <div class="container-fluid px-0">
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-lg-6 px-4 py-5 ps-lg-5 pe-lg-5 d-flex flex-column justify-content-center">
+            <h2 class="nota-title display-5 fw-bold text-uppercase mb-3">
+              El perfume que define tu presencia
+            </h2>
+            <h3 class="nota-subtitle h5 text-uppercase mb-4">
+              El arte de elegir una fragancia
+            </h3>
+
+            <p>
+              Elegir una fragancia va mucho más allá de oler “rico”. Es una forma de comunicación silenciosa
+              que habla de tu <strong>personalidad</strong>, de tu <strong>energía</strong> y del tipo de
+              <strong>presencia</strong> que querés dejar en los demás.
+            </p>
+
+            <button class="btn btn-outline-light btn-sm mb-3 d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#textHistory">
+              Leer más ▾
+            </button>
+
+            <div id="textHistory" class="collapse d-lg-block">
+              <p>
+                Cada perfume está compuesto por <strong>notas de salida, corazón y fondo</strong>. Las notas de
+                salida son las primeras en aparecer: frescas, volátiles, ideales para darte una primera impresión.
+                Las notas de corazón construyen el carácter de la fragancia y se perciben cuando el perfume se asienta
+                en la piel. Las notas de fondo son las que <strong>permanecen</strong> durante horas y dejan ese
+                rastro suave cuando te despedís de un lugar. Entender esta estructura ayuda a elegir perfumes que se
+                sientan cómodos de principio a fin.
+              </p>
+              
+              <p>
+                Las fragancias cítricas suelen asociarse con lo <strong>fresco</strong> y lo <strong>activo</strong>,
+                perfectas para un día de estudio, trabajo o para actividades al aire libre. Las amaderadas transmiten
+                <strong>calidez</strong> y <strong>profundidad</strong>, ideales para la noche o para quienes buscan
+                una presencia más elegante y seria. Las florales pueden ir de lo <strong>romántico</strong> a lo
+                <strong>sofisticado</strong>, según la combinación de pétalos y especias. Las orientales suman un
+                toque envolvente, con vainilla, resinas y especias que dejan una estela inconfundible.
+              </p>
+
+              <p>
+                Una fragancia también está ligada a la <strong>memoria</strong>. Un solo aroma puede transportarte a
+                una persona, a una ciudad o a una etapa de tu vida en cuestión de segundos. Muchas veces recordamos
+                un momento no por lo que vimos, sino por lo que olimos: la colonia de alguien especial, el perfume de
+                una noche importante, el olor de un viaje. Por eso, muchas personas eligen un <strong>perfume firma</strong>,
+                ese que las acompaña durante años y se vuelve casi parte de su identidad.
+              </p>
+
+              <p>
+                En Almerie trabajamos con <strong>ingredientes seleccionados</strong> y concentraciones pensadas para
+                lograr buena <strong>fijación</strong> y <strong>proyección</strong>. Buscamos que cada fragancia
+                tenga una personalidad propia, pero que al mismo tiempo sea cómoda de usar en el día a día. Probamos
+                cómo se comporta cada perfume en distintos tipos de piel y en diferentes climas, para asegurarnos de que
+                te acompañe desde la mañana hasta la noche sin perder presencia. No se trata solo de que dure, sino de
+                que evolucione de forma agradable con el paso de las horas.
+              </p>
+
+              <p>
+                Te invitamos a tomarte el tiempo para <strong>probar</strong>, <strong>comparar</strong> y
+                <strong>descubrir</strong> qué combinación de notas se siente más auténtica para vos. Podés rotar tus
+                fragancias según la estación, el ánimo o el plan del día, o elegir una sola que se convierta en tu
+                <strong>sello personal</strong>. Lo importante es que el aroma te represente y te haga sentir cómodo
+                en tu propia piel. La fragancia adecuada puede convertirse en parte de tu <strong>identidad</strong> y
+                en un detalle que los demás siempre recuerden de vos.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div id="carouselNota" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="Imagenes/perfu8.png" class="d-block w-100 object-fit-cover" alt="Imagen carrusel 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="Imagenes/perfu9.png" class="d-block w-100 object-fit-cover" alt="Imagen carrusel 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="Imagenes/perfu6.png" class="d-block w-100 object-fit-cover" alt="Imagen carrusel 3">
+                </div>
+                <div class="carousel-item">
+                  <img src="Imagenes/perfu7.png" class="d-block w-100 object-fit-cover" alt="Imagen carrusel 4">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselNota" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselNota" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<section id="video" class="py-5" style="background-color: #020e02;">
+  <div class="container-fluid px-4 px-lg-5">
+    <h2 class="section-title text-center mb-4 text-uppercase" style="color: #d6ffbe;">Esencia Visual</h2>
+    <p class="text-center mb-4" style="color: #f5f5f5;">
+      Una representación generativa de cómo nuestras fragancias interactúan con el aire y tu presencia.
+    </p>
+    
+    <div id="canvas-parent" class="d-flex justify-content-center mx-auto shadow-lg" style="max-width: 1000px; border: 1px solid #274b12;">
+    </div>
+
+    <div class="text-center mt-4">
+      <p class="small text-white-50">Mueve el mouse para dispersar el aroma.</p>
+    </div>
+  </div>
+</section>
+
+    <section id="contacto" class="py-5">
+  <div class="container-fluid px-4 px-lg-5">
+    <h2 class="section-title text-center mb-4 text-uppercase">Contacto</h2>
+    <p class="text-center mb-4">
+      Dejanos tu consulta y nos pondremos en contacto para ayudarte a elegir tu fragancia ideal.
+    </p>
+
+    <div class="row g-5 align-items-start">
+
+      <div class="col-lg-6">
+        <form action="enviar.php" method="POST" class="contacto-form mx-auto">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" required autocomplete="name">
+            </div>
+            <div class="col-md-6">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" id="apellido" name="apellido" class="form-control" required>
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required autocomplete="email">
+            </div>
+            <div class="col-12">
+              <label for="comentario" class="form-label">Comentario</label>
+              <textarea id="comentario" name="comentario" rows="4" class="form-control" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-dark px-5 mt-2">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="d-flex flex-column gap-4">
+
+          <div class="d-flex align-items-center gap-4">
+            <img src="Imagenes/rama.jpg"
+                 alt="Foto de Valentina Ruiz"
+                 class="rounded-circle flex-shrink-0"
+                 style="width:90px; height:90px; object-fit:cover; border: 2px solid #274b12;">
+            <div>
+              <h4 class="h6 fw-bold text-uppercase mb-1" style="color:#d6ffbe;">Ramiro Sosa</h4>
+              <p class="small mb-0" style="color:#ccc;">
+                Perfumista con 8 años de experiencia en fragancias orientales y amaderadas.
+                Estudió en Grasse, Francia, cuna de la perfumería mundial.
+              </p>
+              <p class="small mb-0" style="color:#d6ffbe;">📞 +54 11 3567-4802</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-4">
+            <img src="Imagenes/mate.jpg"
+                 alt="Foto de Mateo Ferreyra"
+                 class="rounded-circle flex-shrink-0"
+                 style="width:90px; height:90px; object-fit:cover; border: 2px solid #274b12;">
+            <div>
+              <h4 class="h6 fw-bold text-uppercase mb-1" style="color:#d6ffbe;">Mateo Soto Gauna</h4>
+              <p class="small mb-0" style="color:#ccc;">
+                Especialista en notas cítricas y acuáticas. Desarrolló más de 40 fórmulas
+                exclusivas para marcas independientes de Latinoamérica.
+              </p>
+              <p class="small mb-0" style="color:#d6ffbe;">📞 +54 11 4823-6791</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-4">
+            <img src="Imagenes/luca.jpg"
+                 alt="Foto de Luca Repetto"
+                 class="rounded-circle flex-shrink-0"
+                 style="width:90px; height:90px; object-fit:cover; border: 2px solid #274b12;">
+            <div>
+              <h4 class="h6 fw-bold text-uppercase mb-1" style="color:#d6ffbe;">Luca Repetto</h4>
+              <p class="small mb-0" style="color:#ccc;">
+                Creadora de las líneas florales de Almerie. Su trabajo combina ingredientes
+                naturales con técnicas de maceración artesanal heredadas de su familia.
+              </p>
+              <p class="small mb-0" style="color:#d6ffbe;">📞 +54 11 2941-7653</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer-almerie text-white py-4">
+    <div class="container-fluid px-4 px-lg-5 text-center small">
+      <p class="mb-2">
+        Ramiro Sosa · Mateo Soto Gauna · Luca Repetto ·
+        Diseño y Programacion Web I · Antonio Rubio · DMM3CP · Turno Mañana · Mayo 2026
+      </p>
+      <div class="mb-2">
+        <a href="https://instagram.com" target="_blank" class="social-link me-3" aria-label="Instagram de Almerie">
+          <img src="Imagenes/icons-instagram.png" alt="Icono de Instagram" width="28">
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="social-link me-3" aria-label="TikTok de Almerie">
+          <img src="Imagenes/icon_tiktok.png" alt="Icono de TikTok" width="28">
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-link" aria-label="X (Twitter) de Almerie">
+          <img src="Imagenes/icono_x.png" alt="Icono de X (Twitter)" width="28">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/sketch.js"></script>
+</body>
+</html>
