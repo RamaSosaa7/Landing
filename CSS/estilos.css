@@ -285,6 +285,16 @@ canvas {
     height: 100% !important;
 }
 
+#p5-banner-bg canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
 @media (max-width: 991.98px) {
   .navbar-collapse {
     background-color: #041d10;

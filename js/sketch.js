@@ -1,20 +1,17 @@
-/**
- * PROYECTO: Perfumería Almerie - Arte Generativo
- * CONCEPTO: Representación de la volatilidad y estela de una fragancia.
- */
-
 let particles = [];
-const MAX_PARTICLES = 120; // Cantidad de "moléculas" de perfume
+const MAX_PARTICLES = 400; 
 
 function setup() {
-    const container = document.getElementById('canvas-parent');
-    const canvasWidth = (container && container.offsetWidth > 0)
-        ? container.offsetWidth
-        : window.innerWidth * 0.9;
-    const canvasHeight = 500;
+    const container = document.getElementById('p5-banner-bg');
+    
+    const bannerWidth = container ? container.offsetWidth : window.innerWidth;
+    const bannerHeight = container ? container.offsetHeight : window.innerHeight;
 
-    const canvas = createCanvas(canvasWidth, canvasHeight);
-    canvas.parent('canvas-parent');
+    const canvas = createCanvas(bannerWidth, bannerHeight);
+    
+    if (container) {
+        canvas.parent('p5-banner-bg');
+    }
 
     for (let i = 0; i < MAX_PARTICLES; i++) {
         particles.push(new EssenceParticle());
@@ -22,51 +19,35 @@ function setup() {
 }
 
 function draw() {
-    // Fondo negro verdoso (combinando con #020e02 del CSS) 
-    // con un alpha bajo (25) para generar el efecto de "estela" o rastro visual
-    background(2, 14, 2, 25); 
+    background(2, 14, 2, 20); 
 
-    // Dibujamos y actualizamos cada partícula
     for (let p of particles) {
         p.update();
         p.display();
     }
 }
 
-/**
- * Clase que define el comportamiento de cada molécula de perfume
- */
 class EssenceParticle {
     constructor() {
-        this.reset();
-    }
-
-    reset() {
         this.pos = createVector(random(width), random(height));
-        this.vel = createVector(random(-0.5, 0.5), random(-0.5, 0.5));
-        this.size = random(2, 5);
-        // Color basado en el verde claro del proyecto (#d6ffbe)
-        this.color = color(214, 255, 190, random(100, 200));
+        this.vel = createVector(random(-0.4, 0.4), random(-0.4, 0.4)); 
+        this.size = random(2, 5); 
+        this.color = color(214, 255, 190, 180); 
     }
 
     update() {
         this.pos.add(this.vel);
 
-        // --- INTERACCIÓN CON EL MOUSE ---
-        // Si el mouse está dentro del canvas, las partículas reaccionan
         let mouseDist = dist(mouseX, mouseY, this.pos.x, this.pos.y);
         if (mouseDist < 120) {
             let repulsion = createVector(this.pos.x - mouseX, this.pos.y - mouseY);
             repulsion.normalize();
-            repulsion.mult(2); // Fuerza de soplido o dispersión
+            repulsion.mult(2); 
             this.pos.add(repulsion);
         }
 
-        // --- BORDES INFINITOS ---
-        if (this.pos.x < 0) this.pos.x = width;
-        if (this.pos.x > width) this.pos.x = 0;
-        if (this.pos.y < 0) this.pos.y = height;
-        if (this.pos.y > height) this.pos.y = 0;
+        if (this.pos.x < 0 || this.pos.x > width) this.vel.x *= -1;
+        if (this.pos.y < 0 || this.pos.y > height) this.vel.y *= -1;
     }
 
     display() {
@@ -76,12 +57,9 @@ class EssenceParticle {
     }
 }
 
-/**
- * Ajusta el canvas si el usuario cambia el tamaño de la ventana (Responsividad)
- */
 function windowResized() {
-    const container = document.getElementById('canvas-parent');
+    const container = document.getElementById('p5-banner-bg');
     if (container) {
-        resizeCanvas(container.offsetWidth, 500);
+        resizeCanvas(container.offsetWidth, container.offsetHeight);
     }
 }

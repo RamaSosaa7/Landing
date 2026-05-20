@@ -46,25 +46,20 @@
   </nav>
 
   <main>
-    <header id="inicio">
-      <section id="banner" class="ratio ratio-16x9 vh-100 text-center">
-        
-        <div class="z-3 bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center">
-          <h1 class="display-4 fw-semibold text-uppercase mb-3">Almerie</h1>
-          <p class="lead mb-4">Más que una fragancia</p>
-          <a href="#productos" class="btn btn-outline-light btn-lg">
-            Ver fragancias
-          </a>
-        </div>
-        
-        <video src="Imagenes/video banner_opcion2.mp4"
-               autoplay
-               muted
-               loop
-               class="object-fit-cover">
-        </video>
-      </section>
-    </header>
+  <header id="inicio">
+    <section id="banner" class="ratio ratio-16x9 vh-100 text-center position-relative overflow-hidden">
+    
+      <div class="z-3 bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100">
+        <h1 class="display-4 fw-semibold text-uppercase mb-3">Almerie</h1>
+       <p class="lead mb-4">Más que una fragancia</p>
+       <a href="#productos" class="btn btn-outline-light btn-lg">Ver fragancias</a>
+      </div>
+    
+     <div id="p5-banner-bg" class="position-absolute top-0 start-0 w-100 h-100 z-1">
+         </div>
+
+   </section>
+  </header>
 
     <section id="productos" class="py-5 bg-light">
       <div class="container-fluid px-4 px-lg-5">
@@ -234,22 +229,6 @@
         </div>
       </div>
     </section>
-
-<section id="video" class="py-5" style="background-color: #020e02;">
-  <div class="container-fluid px-4 px-lg-5">
-    <h2 class="section-title text-center mb-4 text-uppercase" style="color: #d6ffbe;">Esencia Visual</h2>
-    <p class="text-center mb-4" style="color: #f5f5f5;">
-      Una representación generativa de cómo nuestras fragancias interactúan con el aire y tu presencia.
-    </p>
-    
-    <div id="canvas-parent" class="d-flex justify-content-center mx-auto shadow-lg" style="max-width: 1000px; border: 1px solid #274b12;">
-    </div>
-
-    <div class="text-center mt-4">
-      <p class="small text-white-50">Mueve el mouse para dispersar el aroma.</p>
-    </div>
-  </div>
-</section>
 
     <section id="contacto" class="py-5">
   <div class="container-fluid px-4 px-lg-5">
